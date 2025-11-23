@@ -27,19 +27,33 @@ Blynk is an IoT platform for iOS or Android smartphones that is used to control 
 **Procedure:**
 
 • Make the circuit connection as per the diagram. In the mobile, download and “Blynq IoT” application using Google play store and Install it. Create log in ID and Password. 
+
 • Connect the IN pin of the Relay module to D1 pin of NodeMCU (ESP8266). 
+
 • Connect VCC of the Relay of NodeMCU. Connect GND of the Relay to GND of NodeMCU.  
+
 • Connect your AC bulb to the Relay’s switch terminal securely. 
+
 • Install ESP8266 board in Arduino IDE via Board Manager. Select board: NodeMCU 1.0 (ESP-12E Module). 
+
 • Include necessary libraries: ESP8266WiFi and ESP8266WebServer. 
+
 • In the code, configure Wi-Fi SSID and Password. 
+
 • Set up a web server that responds to /on and /off URLs. 
+
 • Upload the code to the ESP8266 using a micro USB cable. 
+
 • Get Local IP Address After uploading, open Serial Monitor to find the local IP address of ESP8266. 
+
 • Create Applets on IFTTT - For "This", select Google Assistant → "Say a simple phrase". Command: "Turn on the light". For "That", choose Webhooks → "Make a web request".  
+
 • Repeat to create another applet for command with URL. 
+
 • Test the System - Google Assistant triggers IFTTT → sends Webhook to ESP8266 → turns ON the relay (light). 
+
 • Say "Turn off the ligh to switch it OFF, Say "Turn on the light" to switch it ON
+
 
 
 **Code:**
